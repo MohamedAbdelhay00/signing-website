@@ -175,6 +175,7 @@ password.addEventListener("blur", function(){
 userName.addEventListener("blur", validateUserName);
 
 var form = document.getElementById("myForm");
+var form2 = document.getElementById("mFrom")
 function handleForm(event) {
   event.preventDefault();
 }
