@@ -22,7 +22,7 @@ if (localStorage.getItem("users") !== null) {
 function addUser() {
   var user = {
     username: userName.value,
-    mail: emailAddress.value,
+    email: emailAddress.value,
     password: password.value,
   };
   users.push(user);
@@ -40,7 +40,7 @@ function signUp() {
     for (var i = 0; i < users.length; i++) {
       indexOfU = i;
     }
-    if (emailAddress.value == users[indexOfU].mail) {
+    if (emailAddress.value == users[indexOfU].email) {
       console.log("mail does exsist");
     } else {
       addUser();
@@ -119,15 +119,15 @@ function validateUserName() {
   }
 }
 
-function validateMail(mail) {
+function validateMail(m) {
   var mailRegex = /^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/;
-  if (mailRegex.test(mail.value) == true) {
-    mail.classList.add("is-valid");
-    mail.classList.remove("is-invalid");
+  if (mailRegex.test(m.value) == true) {
+    m.classList.add("is-valid");
+    m.classList.remove("is-invalid");
     return true;
   } else {
-    mail.classList.add("is-invalid");
-    mail.classList.remove("is-valid");
+    m.classList.add("is-invalid");
+    m.classList.remove("is-valid");
     return false;
   }
 }
@@ -180,3 +180,4 @@ function handleForm(event) {
   event.preventDefault();
 }
 form.addEventListener("submit", handleForm);
+form2.addEventListener("submit", handleForm)
