@@ -1,0 +1,16 @@
+body{
+    background-color: #F5F5F5;
+}
+
+#passReq{
+    color: red;
+    list-style: none;
+}
+
+.main{
+    height: 100vh;
+}
+
+.home{
+    height: 100vh;
+}
